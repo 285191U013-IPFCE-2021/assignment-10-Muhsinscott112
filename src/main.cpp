@@ -24,7 +24,7 @@ node *mns = map (ns, square);
 mns = map (ns, square);
 
 print_list(mns);
-
+..
 
 struct tree_node *root = NULL;
 
