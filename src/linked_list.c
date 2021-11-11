@@ -38,19 +38,42 @@ void print_list (node * p)
 {
     // Add your code for exercise 1
     // There is NO testcode for this
+
+if (p->next == 0)
+return;
+printf("%d", p->value);
+print_list(p->next);
+
 }
 
 int sum_squares (node * p)
 {
     // Add your code for excercise 2
     // You can find the tests in tests.cpp
-    return -1;
+
+int sum = 0;
+
+sum += square(p->value);
+
+if (p->next->next != 0)
+  sum += sum_squares(p->next);
+return (sum);
 }
 
 node *map (node * p, int (*f) (int))
 {
     // Add your code for excercise 3
-    return NULL;
+
+node *new_node = malloc(sizeof(node));
+
+new_node->value = f(p->value);
+
+if (p->next->next != 0)
+  new_node->next = map (p->next,f);
+else 
+  new_node->next = &SENTINEL_node;
+
+    return (new_node);
 }
 
 
