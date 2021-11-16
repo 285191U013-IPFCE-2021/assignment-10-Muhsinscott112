@@ -31,7 +31,7 @@ void free_list (node * p)
       q = t;
     }
 }
-.....
+
 
 /* print list to console */
 void print_list (node * p)

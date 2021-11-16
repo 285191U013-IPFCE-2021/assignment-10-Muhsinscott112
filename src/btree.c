@@ -10,6 +10,12 @@ struct tree_node * Insert (int x, struct tree_node *t)
 {
   // Insert item x into the tree t
 
+if (t == 0)
+ return t = malloc(sizeof(struct tree_node));
+  
+
+
+
   return NULL;
 }
 

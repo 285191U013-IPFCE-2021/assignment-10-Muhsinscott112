@@ -1,10 +1,12 @@
-extern "C"{
-    
-    #include <stdio.h>
-    #include "linked_list.h"
+extern "C"{ 
+	#include <stdio.h> 
+
+#include "linked_list.h"
 
     // Add the header files required to run your main 
 }
+
+
 
 // File for sandboxing and trying out code
 int main(int argc, char **argv)
@@ -25,7 +27,7 @@ mns = map (ns, square);
 
 print_list(mns);
 
-orale
+
     return 0;
 
 }
