@@ -41,7 +41,7 @@ void print_list (node * p)
 
 if (p->next == NULL) // if next node is NULL, funtion is exited
 return;
-printf("%d", p->value); // prints value of node
+printf("%d\n", p->value); // prints value of node
 print_list(p->next); // recursive call
 
 }
