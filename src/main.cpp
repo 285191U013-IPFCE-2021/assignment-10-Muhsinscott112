@@ -1,32 +1,41 @@
-extern "C"{ 
-	#include <stdio.h> 
-	#include "linked_list.h"
+extern "C"
+{
+#include <stdio.h>
+#include "linked_list.h"
 
-    // Add the header files required to run your main 
+	// Add the header files required to run your main
 }
-
-
 
 // File for sandboxing and trying out code
 int main(int argc, char **argv)
 {
 
-    	int sum;
-      node *ns = NULL;
-    	ns = make_node (1,
-			make_node (2,
-				   make_node (3,
-					      make_node (4,
-							  make_node (5,
-								    &SENTINEL_node)))));
+	int sum;
+	node *ns = NULL;
+	ns = make_node(1,
+				   make_node(2,
+							 make_node(3,
+									   make_node(4,
+												 make_node(5,
+														   &SENTINEL_node)))));
 
-node *mns = map (ns, square);
+	print_list(ns);
 
-mns = map (ns, square);
+	printf("\n");
 
-print_list(mns);
+	printf("Testing for sum squares function: ");
+	printf("Sum of squares = %d", sum_squares(ns));
 
+	printf("\n");
 
-    return 0;
+	printf("\nTesting for map function\n");
 
+	node *mns = map(ns, square);
+	mns = map(ns, square);
+	print_list(mns);
+
+	printf("====================================");
+	printf("\n All tests passed");
+
+	return 0;
 }
